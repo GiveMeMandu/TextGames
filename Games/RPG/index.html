@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Game</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Dotum";
+        font-size: 12px;
+      }
+      html,
+      body,
+      #wrap {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: #efefef;
+        color: #333;
+      }
+      button {
+        border: none;
+        box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
+        border-radius: 2px;
+        cursor: pointer;
+        box-sizing: border-box;
+      }
+
+      #enchant {
+        width: 300px;
+        height: 254px;
+        background: #fff;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        margin: auto;
+        box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
+        border-radius: 2px;
+      }
+      #enchant .category {
+        line-height: 30px;
+        width: 100%;
+        text-indent: 15px;
+        border-bottom: solid #ddd 1px;
+        box-sizing: border-box;
+      }
+      #enchant .action {
+        padding: 10px;
+        border-bottom: solid #ddd 1px;
+      }
+
+      #enchant .sell-btn {
+        width: 100%;
+        padding: 10px;
+        background: #2ecc71;
+        color: #fff;
+      }
+      #enchant .enchant-btn {
+        width: 100%;
+        padding: 10px;
+        background: #e74c3c;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      #enchant .bool {
+        display: none;
+      }
+      #enchant .success {
+        color: #2ecc71;
+      }
+      #enchant .failure {
+        color: #e743c3;
+      }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="./common/js/common.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="enchant">
+        <div class="weapon category">
+          Lv.<span class="level"></span> [ <span class="name"></span> ]
+          <span class="bool success">성공</span>
+          <span class="bool failure">실패</span>
+        </div>
+        <div class="hp category">
+          HP (<span class="value"></span>/<span class="maxValue"></span>)
+        </div>
+        <div class="cost category">
+          강화 가격 (<span class="value"></span>원)
+        </div>
+        <div class="money category">
+            소지금 (<span class="value"></span>원)
+        </div>
+        <div class="chance category">
+          강화 확률 (<span class="value"></span>%)
+        </div>
+        <div class="action">
+          <button class="enchant-btn">강화하기</button>
+          <button class="sell-btn">판매하기</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
